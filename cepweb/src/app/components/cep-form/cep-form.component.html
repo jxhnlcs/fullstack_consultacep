@@ -1,0 +1,31 @@
+<div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+  <h2 class="text-2xl font-semibold mb-6 text-gray-800 flex items-center gap-2">
+    <i class="fas fa-map-marker-alt"></i> Consultar CEP
+  </h2>
+
+  <div class="flex gap-2 mb-4">
+    <input
+      [(ngModel)]="cep"
+      placeholder="Digite o CEP"
+      class="flex-1 border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button
+      (click)="buscar()"
+      class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+    >
+      Buscar
+    </button>
+  </div>
+
+  <div *ngIf="erro" class="text-red-500">
+    CEP inválido ou não encontrado.
+  </div>
+
+  <div *ngIf="dados" class="space-y-2 text-gray-700">
+    <p><strong>Logradouro:</strong> {{ dados.logradouro }}</p>
+    <p><strong>Bairro:</strong> {{ dados.bairro }}</p>
+    <p><strong>Cidade/UF:</strong> {{ dados.localidade }} - {{ dados.uf }}</p>
+    <p><strong>CEP:</strong> {{ dados.cep }}</p>
+    <p><strong>DDD:</strong> {{ dados.ddd }}</p>
+  </div>
+</div>
