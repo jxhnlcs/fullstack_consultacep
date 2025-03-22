@@ -45,7 +45,7 @@ Aplicação web moderna para consultar informações de endereço a partir do CE
 ### 📦 Backend
 
 1. Navegue até a pasta do backend:
-   - `cd backend`
+   - `cd cepapi`
 2. Execute a aplicação:
    - `./mvnw spring-boot:run`
 3. Acesse:
@@ -56,7 +56,7 @@ Aplicação web moderna para consultar informações de endereço a partir do CE
 ### 💻 Frontend
 
 1. Navegue até a pasta do frontend:
-   - `cd cep-frontend`
+   - `cd cepweb`
 2. Instale as dependências:
    - `npm install`
 3. Inicie o servidor:
